@@ -2,8 +2,7 @@ const CACHE_NAME = 'slope-unblocked-v1.0.1';
 const urlsToCache = [
   '/',
   '/index.html',
-  '/manifest.json',
-  'https://cdn.tailwindcss.com'
+  '/manifest.json'
 ];
 
 // Install event - cache resources
@@ -23,16 +22,31 @@ self.addEventListener('install', event => {
 
 // Fetch event - network-first for navigation, cache-first for others
 self.addEventListener('fetch', event => {
+  const request = event.request;
+  const url = new URL(request.url);
+
+  // Only handle http(s) GET requests
+  if (request.method !== 'GET') {
+    return;
+  }
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') {
+    return;
+  }
+
+  const isSameOrigin = url.origin === self.location.origin;
+
   // Strategy: Network-first for navigation requests (e.g., HTML pages)
-  if (event.request.mode === 'navigate') {
+  if (request.mode === 'navigate') {
     event.respondWith(
-      fetch(event.request)
+      fetch(request)
         .then(response => {
-          // If network is successful, cache the new response and return it
-          const responseToCache = response.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
+          // Cache the response only if same-origin
+          if (isSameOrigin) {
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(request, responseToCache);
+            });
+          }
           return response;
         })
         .catch(() => {
@@ -45,29 +59,22 @@ self.addEventListener('fetch', event => {
 
   // Strategy: Cache-first for all other requests (assets, etc.)
   event.respondWith(
-    caches.match(event.request)
+    caches.match(request)
       .then(response => {
         // Return from cache if found
         if (response) {
           return response;
         }
 
-        // Otherwise, fetch from network, cache, and return
-        return fetch(event.request).then(networkResponse => {
-          // Check if we received a valid response to cache
-          if (networkResponse.type === 'basic' && networkResponse.status !== 200) {
-            return networkResponse;
+        // Otherwise, fetch from network, optionally cache, and return
+        return fetch(request).then(networkResponse => {
+          if (networkResponse && networkResponse.ok && isSameOrigin) {
+            const responseToCache = networkResponse.clone();
+            caches.open(CACHE_NAME).then(cache => {
+              cache.put(request, responseToCache);
+            });
           }
-
-          const responseToCache = networkResponse.clone();
-          caches.open(CACHE_NAME).then(cache => {
-            cache.put(event.request, responseToCache);
-          });
-
           return networkResponse;
-        }).catch(() => {
-          // Optional: return a fallback asset if network fails for an asset
-          // For now, we just let it fail, which is often fine.
         });
       })
   );
@@ -106,8 +113,8 @@ function doBackgroundSync() {
 self.addEventListener('push', event => {
   const options = {
     body: event.data ? event.data.text() : 'New update available!',
-    icon: '/icons/icon-192x192.png',
-    badge: '/icons/icon-72x72.png',
+    icon: '/icons/icon-32x32.svg',
+    badge: '/icons/icon-32x32.svg',
     vibrate: [100, 50, 100],
     data: {
       dateOfArrival: Date.now(),
@@ -117,12 +124,12 @@ self.addEventListener('push', event => {
       {
         action: 'explore',
         title: 'Play Now',
-        icon: '/icons/icon-192x192.png'
+        icon: '/icons/icon-32x32.svg'
       },
       {
         action: 'close',
         title: 'Close',
-        icon: '/icons/icon-192x192.png'
+        icon: '/icons/icon-32x32.svg'
       }
     ]
   };

@@ -5,7 +5,7 @@
   <title>Slope Unblocked – Play Free Online (Slope 2, 3, 76)</title>
   <meta name="description" content="Play Slope Unblocked free in your browser. Smooth 3D action with fast, safe gameplay. Try Slope 2, Slope 3 and Slope 76. No download; works at school and work.">
 
-  <meta name="author" content="SlopeUnblocked.Games">
+  <meta name="author" content="Slope Unblocked">
   <meta name="robots" content="index, follow">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   
@@ -18,27 +18,28 @@
   <meta property="og:url" content="https://slopeunblocked.games/">
   <meta property="og:title" content="Slope Unblocked - Play All Versions (Slope 2, 3, 76)">
   <meta property="og:description" content="Experience the best 3D slopes with Slope Unblocked. We offer all popular versions like Slope 2, Slope 3, and Slope Unblocked 76, completely free and with no download needed.">
-  <meta property="og:image" content="https://slopeunblocked.games/icons/icon-512x512.png">
-  <meta property="og:site_name" content="SlopeUnblocked.Games">
+  <meta property="og:image" content="https://slopeunblocked.games/icons/icon-32x32.svg">
+  <meta property="og:site_name" content="Slope Unblocked">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://slopeunblocked.games/">
   <meta property="twitter:title" content="Slope Unblocked - The Ultimate 3D Slope Game">
   <meta property="twitter:description" content="Play all versions of Slope Unblocked, including Slope 2, 3, and 76. No download, no registration. Just pure, unblocked gaming fun.">
-  <meta property="twitter:image" content="https://slopeunblocked.games/icons/icon-512x512.png">
+  <meta property="twitter:image" content="https://slopeunblocked.games/icons/icon-32x32.svg">
   
   <!-- PWA Manifest -->
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#059669">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="Slope Game">
   
   <!-- Icons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/icons/icon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-192x192.png">
+  <link rel="icon" type="image/svg+xml" sizes="32x32" href="/icons/icon-32x32.svg">
+  <link rel="icon" type="image/svg+xml" sizes="16x16" href="/icons/icon-32x32.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="/icons/icon-32x32.svg">
   <!-- Fallback inline favicon to prevent 404 -->
   <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><circle cx="32" cy="32" r="28" fill="%2300ff88"/></svg>'>
 
@@ -61,7 +62,6 @@
   <!-- Security Headers -->
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; img-src 'self' data: https:; frame-src https://slopeunblocked.bitbucket.io; connect-src 'self' https://www.google-analytics.com;">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
-  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
   
   <!-- Cache Control for Production -->
   <meta http-equiv="Cache-Control" content="public, max-age=31536000">
@@ -509,7 +509,7 @@
     },
     "author": {
       "@type": "Organization",
-      "name": "SlopeUnblocked.Games"
+      "name": "Slope Unblocked"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -526,7 +526,7 @@
     "@type": "VideoGame",
     "name": "Slope Unblocked",
     "url": "https://slopeunblocked.games/",
-    "image": "https://slopeunblocked.games/icons/icon-512x512.png",
+    "image": "https://slopeunblocked.games/icons/icon-32x32.svg",
     "description": "Play the official Slope Unblocked game online for free. Experience fast-paced endless runner gameplay directly in your browser.",
     "genre": ["Arcade", "Endless Runner"],
     "gamePlatform": "Web",
@@ -539,7 +539,7 @@
     },
     "author": {
       "@type": "Organization",
-      "name": "SlopeUnblocked.Games",
+      "name": "Slope Unblocked",
       "url": "https://slopeunblocked.games/"
     }
   }
@@ -649,7 +649,7 @@
   <!-- Header -->
   <header class="cyber-card backdrop-blur border-b border-green-400/30 sticky top-0 z-50 transition-colors">
     <div class="max-w-6xl mx-auto flex justify-between items-center py-4 px-4">
-      <a href="/" class="text-3xl font-extrabold text-green-500 tracking-tight drop-shadow">SlopeUnblocked.Games</a>
+      <a href="/" class="text-3xl font-extrabold text-green-500 tracking-tight drop-shadow">Slope Unblocked</a>
       <div class="flex items-center space-x-6">
         <nav class="hidden md:flex space-x-6 text-lg font-medium">
           <a href="#features" class="hover:text-green-600 transition">Features</a>
@@ -786,11 +786,9 @@
           frameborder="0" 
           allowfullscreen 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups"
+          sandbox="allow-scripts allow-forms allow-popups"
           loading="lazy"
           class="rounded-lg shadow w-full h-auto min-h-[500px] md:min-h-[600px] opacity-0 transition-opacity duration-300"
-          onload="handleGameLoad()"
-          onerror="handleGameError()"
         ></iframe>
         
         <!-- Game Error State -->
@@ -1453,7 +1451,7 @@
   <!-- Footer -->
   <footer class="bg-gradient-to-r from-green-700 to-blue-700 dark:from-green-800 dark:to-blue-800 text-gray-100 py-8 mt-16 shadow-inner transition-colors">
     <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <p class="text-lg">&copy; 2025 SlopeUnblocked.Games. All rights reserved.</p>
+      <p class="text-lg">&copy; 2025 Slope Unblocked. All rights reserved.</p>
       <div class="space-x-6 mt-4 md:mt-0">
         <a href="/" class="hover:text-green-300 transition">Home</a>
         <a href="#versions" class="hover:text-green-300 transition">Versions</a>
@@ -1603,6 +1601,13 @@
       gameError.classList.remove('hidden');
     }
 
+    // Fallback timeout in case iframe never fires load/error
+    setTimeout(() => {
+      if (gameIframe && (gameIframe.src === 'about:blank' || gameIframe.classList.contains('opacity-0'))) {
+        handleGameError();
+      }
+    }, 6000);
+
     function retryGame() {
       gameError.classList.add('hidden');
       gameLoading.classList.remove('hidden');
@@ -1711,9 +1716,14 @@
       }
     }
 
-    // Track game interactions
+    // Track game interactions and handle load
     gameIframe.addEventListener('load', () => {
+      handleGameLoad();
       trackEvent('game_loaded');
+    });
+    
+    gameIframe.addEventListener('error', () => {
+      handleGameError();
     });
 
     // Track PWA installation
