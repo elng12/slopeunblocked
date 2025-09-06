@@ -1,0 +1,45 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required'"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/manifest.json"
+  [headers.values]
+    Content-Type = "application/manifest+json"
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/icons/icon-32x32.png"
+  status = 200
+
+# SPA fallback (removed problematic conditions)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Force HTTPS
+[[redirects]]
+  from = "http://slopeunblocked.games/*"
+  to = "https://slopeunblocked.games/:splat"
+  status = 301
+  force = true
