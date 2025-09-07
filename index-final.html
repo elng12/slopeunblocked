@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Slope Unblocked Team">
+  
+  <!-- 核心SEO标签 -->
+  <title>Slope Unblocked - 免费在线3D斜坡游戏</title>
+  <meta name="description" content="免费在线玩最好的Slope Unblocked游戏。操控3D小球在无尽斜坡上前进，避开障碍物，在这款令人上瘾的无尽跑酷游戏中测试您的反应能力。无需下载，直接畅玩！">
+  <meta name="keywords" content="slope unblocked, slope游戏, 3D斜坡, 无尽跑酷, 在线游戏, 免费游戏">
+  
+  <!-- Open Graph标签 -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Slope Unblocked - 免费在线3D斜坡游戏">
+  <meta property="og:description" content="体验Slope Unblocked的极致快感 - 最佳免费在线3D斜坡游戏，拥有流畅的游戏玩法和具有挑战性的障碍物。支持中文界面！">
+  <meta property="og:url" content="https://slopeunblocked.games/">
+  <meta property="og:site_name" content="Slope Unblocked">
+  
+  <!-- Twitter卡片标签 -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Slope Unblocked - 免费在线3D斜坡游戏">
+  <meta name="twitter:description" content="免费在线玩Slope Unblocked。操控3D小球在无尽斜坡上前进，测试您的反应能力。支持移动端！">
+  
+  <!-- PWA配置 -->
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#10b981">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Slope Game">
+  
+  <!-- 图标 -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%2310b981'/></svg>">
+  <link rel="apple-touch-icon" href="/icons/icon-192x192.png">
+  
+  <!-- 预连接关键资源 -->
+  <link rel="preconnect" href="https://slopeunblocked.bitbucket.io" crossorigin>
+  <link rel="dns-prefetch" href="https://slopeunblocked.bitbucket.io">
+  
+  <!-- 本地Tailwind CSS替代CDN -->
+  <style>
+    /* Tailwind CSS 核心样式 - 生产版本 */
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    body { 
+      line-height: 1.6; 
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #e5e5e5;
+      background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+      min-height: 100vh;
+    }
+    img, picture, video, canvas, svg { display: block; max-width: 100%; }
+    input, button, textarea, select { font: inherit; }
+    p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+    
+    /* 实用工具类 */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+    .text-center { text-align: center; }
+    .py-8 { padding-top: 2rem; padding-bottom: 2rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .w-full { width: 100%; }
+    .max-w-4xl { max-width: 56rem; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
+    .aspect-video { aspect-ratio: 16/9; }
+    .rounded-lg { border-radius: 0.5rem; }
+    .rounded-xl { border-radius: 0.75rem; }
+    .shadow-lg { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1); }
+    .shadow-2xl { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+    .text-3xl { font-size: 1.875rem; line-height: 2.25rem; }
+    .text-4xl { font-size: 2.25rem; line-height: 2.5rem; }
+    .text-5xl { font-size: 3rem; line-height: 1; }
+    .text-xl { font-size: 1.25rem; line-height: 1.75rem; }
+    .text-lg { font-size: 1.125rem; line-height: 1.75rem; }
+    .text-sm { font-size: 0.875rem; line-height: 1.25rem; }
+    .font-bold { font-weight: 700; }
+    .font-extrabold { font-weight: 800; }
+    .leading-tight { line-height: 1.25; }
+    .leading-relaxed { line-height: 1.625; }
+    .text-gray-100 { color: #f3f4f6; }
+    .text-gray-300 { color: #d1d5db; }
+    .text-gray-600 { color: #4b5563; }
+    .text-gray-700 { color: #374151; }
+    .text-green-400 { color: #4ade80; }
+    .text-green-500 { color: #10b981; }
+    .text-green-600 { color: #059669; }
+    .text-blue-500 { color: #3b82f6; }
+    .text-purple-500 { color: #8b5cf6; }
+    .bg-white { background-color: #ffffff; }
+    .bg-gray-800 { background-color: #1f2937; }
+    .bg-gray-900 { background-color: #111827; }
+    .bg-green-500 { background-color: #10b981; }
+    .bg-green-600 { background-color: #059669; }
+    .bg-blue-500 { background-color: #3b82f6; }
+    .bg-purple-500 { background-color: #8b5cf6; }
+    .bg-black { background-color: #000000; }
+    .bg-black\/50 { background-color: rgba(0, 0, 0, 0.5); }
+    .bg-black\/70 { background-color: rgba(0, 0, 0, 0.7); }
+    .bg-white\/80 { background-color: rgba(255, 255, 255, 0.8); }
+    .bg-white\/90 { background-color: rgba(255, 255, 255, 0.9); }
+    .flex { display: flex; }
+    .grid { display: grid; }
+    .hidden { display: none; }
+    .items-center { align-items: center; }
+    .justify-center { justify-content: center; }
+    .justify-between { justify-content: space-between; }
+    .space-x-2 > * + * { margin-left: 0.5rem; }
+    .space-x-3 > * + * { margin-left: 0.75rem; }
+    .space-x-4 > * + * { margin-left: 1rem; }
+    .space-x-6 > * + * { margin-left: 1.5rem; }
+    .space-y-2 > * + * { margin-top: 0.5rem; }
+    .space-y-3 > * + * { margin-top: 0.75rem; }
+    .space-y-4 > * + * { margin-top: 1rem; }
+    .space-y-6 > * + * { margin-top: 1.5rem; }
+    .p-2 { padding: 0.5rem; }
+    .p-3 { padding: 0.75rem; }
+    .p-4 { padding: 1rem; }
+    .p-6 { padding: 1.5rem; }
+    .p-8 { padding: 2rem; }
+    .px-4 { padding-left: 1rem; padding-right: 1rem; }
+    .px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .px-8 { padding-left: 2rem; padding-right: 2rem; }
+    .py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+    .rounded-full { border-radius: 9999px; }
+    .border { border-width: 1px; }
+    .border-green-400\/30 { border-color: rgba(74, 222, 128, 0.3); }
+    .border-green-500 { border-color: #10b981; }
+    .shadow { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); }
+    .shadow-md { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); }
+    .shadow-xl { box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04); }
+    .shadow-inner { box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06); }
+    .transition-colors { transition-property: color, background-color, border-color; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    .transition-transform { transition-property: transform; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    .transition-all { transition-property: all; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 150ms; }
+    .duration-200 { transition-duration: 200ms; }
+    .duration-300 { transition-duration: 300ms; }
+    .hover\:scale-105:hover { transform: scale(1.05); }
+    .hover\:bg-green-600:hover { background-color: #059669; }
+    .hover\:bg-gray-100:hover { background-color: #f3f4f6; }
+    .hover\:text-green-300:hover { color: #86efac; }
+    .hover\:text-green-400:hover { color: #4ade80; }
+    .hover\:text-green-600:hover { color: #059669; }
+    .hover\:shadow-2xl:hover { box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); }
+    .active\:scale-95:active { transform: scale(0.95); }
+    .touch-manipulation { touch-action: manipulation; }
+    .backdrop-blur { backdrop-filter: blur(8px); }
+    .fixed { position: fixed; }
+    .absolute { position: absolute; }
+    .relative { position: relative; }
+    .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+    .top-4 { top: 1rem; }
+    .right-4 { right: 1rem; }
+    .bottom-4 { bottom: 1rem; }
+    .left-4 { left: 1rem; }
+    .bottom-0 { bottom: 0; }
+    .left-0 { left: 0; }
+    .right-0 { right: 0; }
+    .top-0 { top: 0; }
+    .z-30 { z-index: 30; }
+    .z-40 { z-index: 40; }
+    .z-50 { z-index: 50; }
+    .min-h-screen { min-height: 100vh; }
+    .min-h-\[500px\] { min-height: 500px; }
+    .min-h-\[600px\] { min-height: 600px; }
+    .max-w-3xl { max-width: 48rem; }
+    .max-w-5xl { max-width: 64rem; }
+    .max-w-6xl { max-width: 72rem; }
+    .max-w-md { max-width: 28rem; }
+    .transform { transform: translateX(var(--tw-translate-x, 0)) translateY(var(--tw-translate-y, 0)) rotate(var(--tw-rotate, 0)) skewX(var(--tw-skew-x, 0)) skewY(var(--tw-skew-y, 0)) scaleX(var(--tw-scale-x, 1)) scaleY(var(--tw-scale-y, 1)); }
+    .-translate-x-1\/2 { --tw-translate-x: -50%; }
+    .grid-cols-1 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+    .grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+    .flex-col { flex-direction: column; }
+    .flex-row { flex-direction: row; }
+    .flex-wrap { flex-wrap: wrap; }
+    .tracking-tight { letter-spacing: -0.025em; }
+    .opacity-0 { opacity: 0; }
+    .opacity-100 { opacity: 1; }
+    .opacity-90 { opacity: 0.9; }
+    .opacity-70 { opacity: 0.7; }
+    .h-5 { height: 1.25rem; }
+    .h-6 { height: 1.5rem; }
+    .h-8 { height: 2rem; }
+    .h-12 { height: 3rem; }
+    .h-16 { height: 4rem; }
+    .h-auto { height: auto; }
+    .h-full { height: 100%; }
+    .h-screen { height: 100vh; }
+    .h-\[3rem\] { height: 3rem; }
+    .h-\[4rem\] { height: 4rem; }
+    .w-5 { width: 1.25rem; }
+    .w-6 { width: 1.5rem; }
+    .w-8 { width: 2rem; }
+    .w-12 { width: 3rem; }
+    .w-16 { width: 4rem; }
+    .w-full { width: 100%; }
+    .w-\[3rem\] { width: 3rem; }
+    .w-\[4rem\] { width: 4rem; }
+    .w-80 { width: 20rem; }
+    .max-w-none { max-width: none; }
+    .max-h-none { max-height: none; }
+    .mt-2 { margin-top: 0.5rem; }
+    .mt-3 { margin-top: 0.75rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-12 { margin-bottom: 3rem; }
+    .mr-3 { margin-right: 0.75rem; }
+    .mr-4 { margin-right: 1rem; }
+    .ml-auto { margin-left: auto; }
+    .ring-1 { box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color); }
+    .ring-white\/10 { --tw-ring-color: rgba(255, 255, 255, 0.1); }
+    .inset-y-0 { top: 0; bottom: 0; }
+    .right-0 { right: 0; }
+    .left-0 { left: 0; }
+    .-mr-2 { margin-right: -0.5rem; }
+    .ml-2 { margin-left: 0.5rem; }
+    .ml-auto { margin-left: auto; }
+    .mt-1 { margin-top: 0.25rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+    .truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .whitespace-nowrap { white-space: nowrap; }
+    .text-ellipsis { text-overflow: ellipsis; }
+    .underline { text-decoration-line: underline; }
+    .no-underline { text-decoration-line: none; }
+    .decoration-green-400 { text-decoration-color: #4ade80; }
+    .decoration-2 { text-decoration-thickness: 2px; }
+    .underline-offset-4 { text-underline-offset: 4px; }
+    .capitalize { text-transform: capitalize; }
+    .lowercase { text-transform: lowercase; }
+    .uppercase { text-transform: uppercase; }
+    .italic { font-style: italic; }
+    .not-italic { font-style: normal; }
+    .font-thin { font-weight: 100; }
+    .font-extralight { font-weight: 200; }
+    .font-light { font-weight: 300; }
+    .font-normal { font-weight: 400; }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .font-extrabold { font-weight: 800; }
+    .font-black { font-weight: 900; }
+    .text-left { text-align: left; }
+    .text-center { text-align: center; }
+    .text-right { text-align: right; }
+    .text-justify { text-align: justify; }
+    .align-baseline { vertical-align: baseline; }
+    .align-top { vertical-align: top; }
+    .align-middle { vertical-align: middle; }
+    .align-bottom { vertical-align: bottom; }
+    .align-text-top { vertical-align: text-top; }
+    .align-text-bottom { vertical-align: text-bottom; }
+    .align-sub { vertical-align: sub; }
+    .align-super { vertical-align: super; }
+    .leading-none { line-height: 1; }
+    .leading-tight { line-height: 1.25; }
+    .leading-snug { line-height: 1.375; }
+    .leading-normal { line-height: 1.5; }
+    .leading-relaxed { line-height: 1.625; }
+    .leading-loose { line-height: 2; }
+    .list-none { list-style-type: none; }
+    .list-disc { list-style-type: disc; }
+    .list-decimal { list-style-type: decimal; }
+    .list-inside { list-style-position: inside; }
+    .list-outside { list-style-position: outside; }
+
+    /* 游戏容器样式 */
+    .game-container {
+      aspect-ratio: 16/9;
+      min-height: 500px;
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.9), rgba(16, 33, 62, 0.9));
+      border: 2px solid #10b981;
+      box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+    }
+    
+    .game-container::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #10b981, #3b82f6, #8b5cf6, #10b981);
+      border-radius: inherit;
+      z-index: -1;
+      animation: border-glow 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes border-glow {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    
+    #game-iframe {
+      width: 100% !important;
+      height: 100% !important;
+      min-height: inherit;
+      border-radius: 0.75rem;
+    }
+    
+    .game-container:fullscreen {
+      background: #050507;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .game-container:fullscreen #game-iframe {
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: none !important;
+      max-height: none !important;
+      border-radius: 0;
+    }
+    
+    /* 赛博朋克按钮 */
+    .cyber-btn {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1));
+      border: 1px solid #10b981;
+      color: #10b981;
+      text-shadow: 0 0 10px #10b981;
+      box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+      cursor: pointer;
+    }
+    
+    .cyber-btn:hover {
+      background: linear-gradient(145deg, rgba(16, 185, 129, 0.2), rgba(59, 130, 246, 0.2));
+      box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+      transform: translateY(-2px);
+    }
+    
+    .cyber-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.5s;
+    }
+    
+    .cyber-btn:hover::before {
+      left: 100%;
+    }
+    
+    /* 赛博朋克卡片 */
+    .cyber-card {
+      background: linear-gradient(145deg, rgba(26, 26, 46, 0.8), rgba(16, 33, 62, 0.8));
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      border-radius: 1rem;
+      padding: 2rem;
+    }
+    
+    .cyber-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #10b981, transparent);
+      animation: scan-line 2s ease-in-out infinite;
+    }
+    
+    @keyframes scan-line {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+    
+    /* 霓虹文字效果 */
+    .neon-text-green {
+      color: #10b981;
+      text-shadow: 0 0 5px rgba(16, 185, 129, 0.6);
+      font-weight: 600;
+    }
+    
+    .neon-text-blue {
+      color: #3b82f6;
+      text-shadow: 0 0 5px rgba(59, 130, 246, 0.6);
+      font-weight: 600;
+    }
+    
+    .neon-text-purple {
+      color: #8b5cf6;
+      text-shadow: 0 0 5px rgba(139, 92, 246, 0.6);
+      font-weight: 600;
+    }
+    
+    .neon-text-cyan {
+      color: #06b6d4;
+      text-shadow: 0 0 5px rgba(6, 182, 212, 0.6);
+      font-weight: 600;
+    }
+    
+    /* 加载动画 */
+    .cyber-loading {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto;
+    }
+    
+    .cyber-loading::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 3px solid transparent;
+      border-top: 3px solid #10b981;
+      border-right: 3px solid #3b82f6;
+      border-radius: 50%;
+      animation: cyber-spin 1s linear infinite;
+    }
+    
+    .cyber-loading::after {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: calc(100% - 12px);
+      height: calc(100% - 12px);
+      border: 2px solid transparent;
+      border-bottom: 2px solid #8b5cf6;
+      border-left: 2px solid #06b6d4;
+      border-radius: 50%;
+      animation: cyber-spin 0.8s linear infinite reverse;
+    }
+    
+    @keyframes cyber-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .game-container {
+        aspect-ratio: 3/4;
+        min-height: 400px;
+      }
+      
+      .text-5xl { font-size: 2.25rem; line-height: 2.5rem; }
+      .text-4xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-3xl { font-size: 1.5rem; line-height: 2rem; }
+      
+      .grid-cols-2 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      .grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+      
+      .flex-col { flex-direction: column; }
+      .flex-row { flex-direction: row; }
+      
+      .space-x-6 > * + * { margin-left: 0; margin-top: 1.5rem; }
+      
+      .md\:hidden { display: none; }
+    }
+    
+    @media (max-width: 640px) {
+      .px-4 { padding-left: 0.75rem; padding-right: 0.75rem; }
+      
+      .text-5xl { font-size: 1.875rem; line-height: 2.25rem; }
+      .text-4xl { font-size: 1.5rem; line-height: 2rem; }
+      .text-xl { font-size: 1.125rem; line-height: 1.75rem; }
+    }
+    
+    /* 暗色模式支持 */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+        color: #e5e5e5;
+      }
+      
+      .bg-white { background-color: #1f2937; }
+      .text-gray-700 { color: #d1d5db; }
+      .text-gray-600 { color: #9ca3af; }
+    }
+    
+    /* 减少运动偏好 */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+    
+    /* 加载状态 */
+    .opacity-0 { opacity: 0; }
+    .opacity-100 { opacity: 1; }
+    .hidden { display: none; }
+    
+    /* 全屏按钮 */
+    #fullscreen-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 0.75rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+    
+    .game-container:hover #fullscreen-btn {
+      opacity: 1;
+    }
+    
+    #fullscreen-btn:hover {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    
+    /* 移动端控制 */
+    #mobile-controls {
+      position: fixed;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 1rem;
+      z-index: 30;
+    }
+    
+    @media (min-width: 769px) {
+      #mobile-controls {
+        display: none;
+      }
+    }
+    
+    #left-btn, #right-btn {
+      background: rgba(16, 185, 129, 0.9);
+      color: white;
+      padding: 1rem;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      touch-action: manipulation;
+    }
+    
+    #left-btn:active, #right-btn:active {
+      transform: scale(0.95);
+    }
+    
+    /* 错误处理 */
+    #game-error {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: inherit;
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      #game-error {
+        background: rgba(31, 41, 55, 0.9);
+      }
+    }
+    
+    #game-loading {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.8);
+      border-radius: inherit;
+    }
+    
+    /* 页脚 */
+    footer {
+      background: linear-gradient(135deg, #059669 0%, #2563eb 100%);
+      color: white;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+    
+    /* 动画效果 */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-fade-in {
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+    /* 可访问性 */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* 焦点样式 */
+    button:focus,
+    a:focus {
+      outline: 2px solid #10b981;
+      outline-offset: 2px;
+    }
+    
+    /* 加载动画 */
+    .animate-spin {
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .rounded-full {
+      border-radius: 9999px;
+    }
+    
+    .border-b-2 {
+      border-bottom-width: 2px;
+    }
+    
+    .border-green-500 {
+      border-color: #10b981;
+    }
+    
+    .mx-auto {
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .mb-4 {
+      margin-bottom: 1rem;
+    }
+    
+    .text-lg {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+    
+    .text-gray-500 {
+      color: #6b7280;
+    }
+    
+    /* 自定义滚动条 */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #1a1a2e;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #10b981;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #059669;
+    }
+  </style>
+  
+  <!-- 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Slope Unblocked",
+    "description": "免费在线玩Slope Unblocked。体验惊心动魄的3D无尽跑酷游戏，直接在浏览器中运行。",
+    "url": "https://slopeunblocked.games/",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "CNY"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Slope Unblocked"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "ratingCount": "1000"
+    },
+    "inLanguage": "zh-CN",
+    "availableChannel": {
+      "@type": "ServiceChannel",
+      "serviceUrl": "https://slopeunblocked.games/",
+      "serviceSmsNumber": "https://slopeunblocked.games/"
+    }
+  }
+  </script>
+  
+  <!-- 安全头部 (移除X-Frame-Options meta标签，只保留有效的) -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://slopeunblocked.bitbucket.io https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: https://slopeunblocked.bitbucket.io; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://slopeunblocked.bitbucket.io; frame-src https://slopeunblocked.bitbucket.io; worker-src 'self';">
+  
+  <!-- 性能优化 -->
+  <link rel="preload" href="https://slopeunblocked.bitbucket.io/" as="document" crossorigin>
+  <link rel="dns-prefetch" href="https://slopeunblocked.bitbucket.io">
+  
+  <!-- 渐进式Web应用 -->
+  <script>
+    // PWA安装提示
+    let deferredPrompt;
+    
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      
+      // 显示安装按钮
+      const installBtn = document.createElement('button');
+      installBtn.id = 'pwa-install-btn';
+      installBtn.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
+      installBtn.textContent = '安装应用';
+      installBtn.onclick = async () => {
+        if (deferredPrompt) {
+          deferredPrompt.prompt();
+          const { outcome } = await deferredPrompt.userChoice;
+          if (outcome === 'accepted') {
+            installBtn.remove();
+          }
+          deferredPrompt = null;
+        }
+      };
+      document.body.appendChild(installBtn);
+    });
+    
+    // 注册Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw-final.js')
+          .then((registration) => {
+            console.log('ServiceWorker注册成功:', registration.scope);
+          })
+          .catch((err) => {
+            console.log('ServiceWorker注册失败:', err);
+          });
+      });
+    }
+  </script>
+</head>
+<body class="min-h-screen text-gray-100">
+  <!-- 跳过导航链接（可访问性） -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-green-500 text-white px-4 py-2 rounded-lg z-50">跳到主内容</a>
+  
+  <!-- 头部导航 -->
+  <header class="cyber-card backdrop-blur border-b border-green-400/30 sticky top-0 z-40">
+    <div class="container flex justify-between items-center py-4">
+      <h1 class="text-3xl font-extrabold text-green-500 tracking-tight">
+        <a href="/" class="hover:text-green-400 transition-colors">Slope Unblocked</a>
+      </h1>
+      <nav class="hidden md:flex space-x-6 text-lg font-medium" aria-label="主导航">
+        <a href="#play" class="hover:text-green-400 transition-colors">开始游戏</a>
+        <a href="#features" class="hover:text-green-400 transition-colors">游戏特色</a>
+        <a href="#how-to-play" class="hover:text-green-400 transition-colors">游戏指南</a>
+        <a href="#faq" class="hover:text-green-400 transition-colors">常见问题</a>
+      </nav>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors" aria-label="打开菜单" aria-expanded="false">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- 移动端菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-50 bg-black/70 backdrop-blur" aria-hidden="true">
+      <div class="bg-gray-900 text-white w-80 h-full shadow-2xl">
+        <div class="p-4 flex items-center justify-between border-b border-white/10">
+          <span class="font-semibold">Slope Unblocked</span>
+          <button id="mobile-menu-close" class="p-2 text-white hover:text-gray-300" aria-label="关闭菜单">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <nav class="p-4 space-y-2">
+          <a href="#play" class="block py-2 hover:text-green-400 transition-colors">开始游戏</a>
+          <a href="#features" class="block py-2 hover:text-green-400 transition-colors">游戏特色</a>
+          <a href="#how-to-play" class="block py-2 hover:text-green-400 transition-colors">游戏指南</a>
+          <a href="#faq" class="block py-2 hover:text-green-400 transition-colors">常见问题</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- 主内容区域 -->
+  <main id="main-content">
+    <!-- 英雄区域 -->
+    <section class="container py-16 text-center animate-fade-in">
+      <h1 class="text-5xl md:text-6xl font-black mb-6 leading-tight neon-text-green">
+        Slope Unblocked
+      </h1>
+      <h2 class="text-2xl md:text-3xl font-bold mb-8 neon-text-blue">
+        免费在线3D斜坡游戏
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+        体验终极的无尽跑酷挑战！操控小球在无尽的斜坡上前进，避开障碍物，在这个令人上瘾的3D游戏中测试你的反应能力。
+      </p>
+      
+      <!-- 游戏特色标签 -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <div class="bg-white/80 px-4 py-2 rounded-full shadow-md flex items-center space-x-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="font-medium text-gray-700">完全免费</span>
+        </div>
+        <div class="bg-white/80 px-4 py-2 rounded-full shadow-md flex items-center space-x-2">
+          <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="font-medium text-gray-700">无需下载</span>
+        </div>
+        <div class="bg-white/80 px-4 py-2 rounded-full shadow-md flex items-center space-x-2">
+          <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-.992 0l-7 4A1 1 0 003 8v7a1 1 0 100 2h14a1 1 0 100-2V8a1 1 0 00.496-1.868l-7-4zM6 9a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+          </svg>
+          <span class="font-medium text-gray-700">畅玩无阻</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 游戏区域 -->
+    <section class="container pb-16" id="play">
+      <div class="flex justify-center">
+        <div class="game-container cyber-card w-full max-w-5xl">
+          <!-- 游戏加载指示器 -->
+          <div id="game-loading" class="flex items-center justify-center">
+            <div class="text-center">
+              <div class="cyber-loading mb-6" aria-hidden="true"></div>
+              <p class="text-lg font-medium neon-text-green">正在加载Slope游戏...</p>
+              <p class="text-sm neon-text-blue mt-2">准备您的赛博朋克体验</p>
+            </div>
+          </div>
+          
+          <!-- 游戏iframe - 修复沙盒安全问题 -->
+          <iframe 
+            id="game-iframe"
+            title="Slope Unblocked Game"
+            src="about:blank"
+            data-src="https://slopeunblocked.bitbucket.io/file/" 
+            width="800" 
+            height="600" 
+            frameborder="0" 
+            allowfullscreen 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            sandbox="allow-scripts allow-forms allow-popups allow-same-origin"
+            loading="lazy"
+            class="rounded-lg shadow w-full h-auto min-h-[500px] md:min-h-[600px] opacity-0 transition-opacity duration-300"
+          ></iframe>
+          
+          <!-- 游戏错误状态 -->
+          <div id="game-error" class="hidden flex items-center justify-center bg-white/90 dark:bg-gray-800/90">
+            <div class="text-center p-4">
+              <div class="text-red-500 mb-3">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+              </div>
+              <p class="text-sm text-gray-600 dark:text-gray-300 mb-3">游戏加载失败</p>
+              <button onclick="retryGame()" class="bg-green-500 text-white px-4 py-2 rounded text-sm hover:bg-green-600 transition-colors">
+                重试
+              </button>
+            </div>
+          </div>
+          
+          <!-- 全屏按钮 -->
+          <button id="fullscreen-btn" class="bg-black/50 text-white p-3 rounded-lg hover:bg-black/70 transition-colors" onclick="toggleFullscreen()" aria-label="全屏模式">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 游戏操作区域 -->
+    <section class="container py-8 text-center">
+      <!-- 快速游戏信息 -->
+      <div class="bg-gradient-to-r from-green-50 to-blue-50 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-6 mb-8 border border-green-200 dark:border-gray-600">
+        <h3 class="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3">🎮 如何游戏</h3>
+        <p class="text-gray-600 dark:text-gray-300 mb-4">使用 ← → 方向键控制小球。避开红色障碍物，尽可能长时间地留在轨道上！</p>
+        <div class="flex justify-center space-x-4 text-sm">
+          <span class="bg-white dark:bg-gray-600 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300">⚡ 快节奏</span>
+          <span class="bg-white dark:bg-gray-600 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300">🏆 高分挑战</span>
+          <span class="bg-white dark:bg-gray-600 px-3 py-1 rounded-full text-gray-700 dark:text-gray-300">🎯 技巧性</span>
+        </div>
+      </div>
+      
+      <!-- 操作按钮 -->
+      <div class="flex flex-col sm:flex-row gap-4 items-center justify-center mb-8">
+        <a href="#play" class="group inline-flex items-center space-x-2 bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 hover:from-green-600 hover:to-blue-600 transition-all duration-200">
+          <svg class="w-5 h-5 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
+          </svg>
+          <span>再玩一次</span>
+        </a>
+        
+        <!-- 社交分享按钮 -->
+        <div class="flex space-x-3">
+          <button onclick="shareGame('twitter')" class="group bg-blue-400 hover:bg-blue-500 text-white p-3 rounded-lg transition-all duration-200 hover:scale-110" title="分享到Twitter">
+            <svg class="w-5 h-5 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </button>
+          <button onclick="shareGame('facebook')" class="group bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-all duration-200 hover:scale-110" title="分享到Facebook">
+            <svg class="w-5 h-5 group-hover:animate-bounce" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </button>
+          <button onclick="shareGame('copy')" class="group bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-lg transition-all duration-200 hover:scale-110" title="复制链接">
+            <svg class="w-5 h-5 group-hover:animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 游戏特色 -->
+    <section class="container py-16" id="features">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-6 neon-text-green">为什么选择Slope Unblocked？</h2>
+        <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          发现让Slope Unblocked成为终极无尽跑酷体验的原因。我们的平台提供最真实、最刺激的Slope Unblocked游戏体验，具有增强的图形、流畅的控制和对这款经典街机游戏的无限制访问。
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div class="cyber-card p-8 rounded-2xl transition-all duration-300 hover:shadow-2xl">
+          <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center neon-text-cyan">闪电般的快速动作</h3>
+          <p class="text-gray-300 text-center leading-relaxed mb-6">
+            体验最激烈的Slope Unblocked游戏玩法，加速速度挑战您的反应能力。我们的优化版本确保在所有设备上流畅运行，提供您喜爱的真实Slope Unblocked体验，没有任何延迟或中断。
+          </p>
+          <div class="text-center">
+            <a href="#play" class="cyber-btn">立即游戏</a>
+          </div>
+        </div>
+
+        <div class="cyber-card p-8 rounded-2xl transition-all duration-300 hover:shadow-2xl">
+          <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center neon-text-cyan">直观的控制</h3>
+          <p class="text-gray-300 text-center leading-relaxed mb-6">
+            掌握简单但精确的控制，使Slope Unblocked适合所有人。无论您是初学者还是专家，我们的响应式控制系统确保每一个动作都很重要。经典的Slope Unblocked机制保持不变，提供全球玩家喜爱的真实游戏体验。
+          </p>
+          <div class="text-center">
+            <a href="#play" class="cyber-btn">立即游戏</a>
+          </div>
+        </div>
+
+        <div class="cyber-card p-8 rounded-2xl transition-all duration-300 hover:shadow-2xl">
+          <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-center neon-text-cyan">完全无限制访问</h3>
+          <p class="text-gray-300 text-center leading-relaxed mb-6">
+            随时随地享受无限制的Slope Unblocked访问。我们的平台绕过网络限制，确保您可以在学校、工作或家中无限制地玩Slope Unblocked。体验我们可靠安全的Slope Unblocked平台带来的自由游戏体验。
+          </p>
+          <div class="text-center">
+            <a href="#play" class="cyber-btn">立即游戏</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 行动召唤 -->
+      <div class="text-center bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl p-8 text-white">
+        <h3 class="text-3xl font-bold mb-4">准备好掌握游戏了吗？</h3>
+        <p class="text-xl mb-6 opacity-90">加入全球数百万喜爱快节奏刺激的玩家。今天就开始您的无尽跑酷冒险！</p>
+        <a href="#play" class="inline-block bg-white text-green-600 px-8 py-4 rounded-xl font-bold shadow-lg hover:scale-105 transition-transform duration-200">
+          立即游戏
+        </a>
+      </div>
+    </section>
+
+    <!-- 游戏指南 -->
+    <section class="container py-16" id="how-to-play">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-6 text-green-600">如何玩Slope Unblocked</h2>
+        <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          通过我们的综合指南掌握Slope Unblocked的艺术。从基本控制到高级策略，学习您需要了解的一切来主导排行榜。
+        </p>
+      </div>
+
+      <!-- 基本控制 -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">基本控制</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+            <h4 class="text-2xl font-bold mb-6 text-blue-700 dark:text-blue-400">桌面控制</h4>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-white font-bold">←</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">左方向键</p>
+                  <p class="text-gray-600 dark:text-gray-300">在Slope Unblocked中将球转向左侧</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <span class="text-white font-bold">→</span>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">右方向键</p>
+                  <p class="text-gray-600 dark:text-gray-300">在Slope Unblocked中将球转向右侧</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+            <h4 class="text-2xl font-bold mb-6 text-green-700 dark:text-green-400">移动设备控制</h4>
+            <div class="space-y-4">
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">触摸和拖动</p>
+                  <p class="text-gray-600 dark:text-gray-300">向左或向右滑动以控制移动</p>
+                </div>
+              </div>
+              <div class="flex items-center">
+                <div class="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center mr-4">
+                  <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v3.586L7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                  </svg>
+                </div>
+                <div>
+                  <p class="font-semibold text-gray-800 dark:text-gray-200">虚拟按钮</p>
+                  <p class="text-gray-600 dark:text-gray-300">使用屏幕上的控制按钮进行精确移动</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 游戏机制 -->
+      <div class="mb-16">
+        <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">理解Slope Unblocked机制</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3 text-center text-gray-800 dark:text-gray-200">Slope Unblocked中的障碍物</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-center">红色方块和障碍物会立即结束您的游戏。学会识别并避开这些致命的障碍物，当您通过Slope Unblocked赛道时。</p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3 text-center text-gray-800 dark:text-gray-200">速度加速</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-center">您的球在Slope Unblocked中持续加速，使精确控制越来越具有挑战性。随着游戏进行调整您的反应时间。</p>
+          </div>
+          <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-3 text-center text-gray-800 dark:text-gray-200">计分系统</h4>
+            <p class="text-gray-600 dark:text-gray-300 text-center">在Slope Unblocked中，根据行进的距离和生存时间获得分数。您生存的时间越长，您的分数就越高。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 高级策略 -->
+      <div class="bg-gradient-to-r from-purple-100 to-pink-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+        <h3 class="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-200">高级Slope Unblocked策略</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h4 class="text-2xl font-bold mb-4 text-purple-700 dark:text-purple-400">Slope Unblocked掌握的专业技巧</h4>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
+                <span>提前预测障碍物 - 在Slope Unblocked中向前看，而不是只关注您的即时位置</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
+                <span>使用温和的转向动作 - 在Slope Unblocked中急转弯通常会导致失控</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</span>
+                <span>尽可能保持居中 - 在Slope Unblocked中，轨道的中间位置提供最多的逃生路线</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</span>
+                <span>练习节奏 - 发展一致的游玩节奏以提高您的Slope Unblocked表现</span>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-2xl font-bold mb-4 text-pink-700 dark:text-pink-400">常见的Slope Unblocked错误</h4>
+            <ul class="space-y-3 text-gray-700 dark:text-gray-300">
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">×</span>
+                <span>过度转向 - 进行过度修正导致在Slope Unblocked中坠毁</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">×</span>
+                <span>恐慌反应 - 当速度增加时在Slope Unblocked中失去镇定</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">×</span>
+                <span>忽略模式 - 无法识别在Slope Unblocked中重复出现的障碍物模式</span>
+              </li>
+              <li class="flex items-start">
+                <span class="w-6 h-6 bg-pink-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-0.5">×</span>
+                <span>不耐烦 - 冲过路段而不是保持稳定控制</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="container py-16" id="faq">
+      <h2 class="text-4xl font-bold mb-12 text-green-600 text-center">常见问题</h2>
+      
+      <div class="space-y-6 max-w-4xl mx-auto">
+        <div class="cyber-card p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">我需要下载Slope Unblocked吗？</h3>
+          <p class="text-gray-300">不需要，Slope Unblocked完全基于浏览器运行。您可以直接在我们的网站上玩，无需任何下载或安装。</p>
+        </div>
+        
+        <div class="cyber-card p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Slope Unblocked可以在学校玩吗？</h3>
+          <p class="text-gray-300">是的，Slope Unblocked设计用于绕过网络限制，使其可以在学校、工作场所或其他可能限制游戏的环境中玩。</p>
+        </div>
+        
+        <div class="cyber-card p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Slope Unblocked有移动版本吗？</h3>
+          <p class="text-gray-300">是的，Slope Unblocked完全支持移动设备。您可以使用触摸控制在手机或平板电脑上玩。</p>
+        </div>
+        
+        <div class="cyber-card p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">如何提高我的Slope Unblocked分数？</h3>
+          <p class="text-gray-300">专注于预测即将到来的障碍物，使用温和的转向动作，尽可能保持轨道中心位置，并练习保持一致的节奏。</p>
+        </div>
+        
+        <div class="cyber-card p-6 rounded-xl">
+          <h3 class="text-xl font-semibold mb-3 text-green-400">Slope Unblocked的不同版本有什么区别？</h3>
+          <p class="text-gray-300">原版Slope Unblocked提供经典体验，Slope 2通常有新的障碍物，Slope 3有更复杂的设计。我们提供经典版本，许多人认为这是最平衡和可重玩的版本。</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 移动端虚拟控制 -->
+  <div id="mobile-controls">
+    <button id="left-btn" class="bg-green-500 text-white p-4 rounded-full shadow-lg active:scale-95 transition-transform touch-manipulation" aria-label="向左移动">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+      </svg>
+    </button>
+    <button id="right-btn" class="bg-green-500 text-white p-4 rounded-full shadow-lg active:scale-95 transition-transform touch-manipulation" aria-label="向右移动">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- 页脚 -->
+  <footer class="text-white py-8">
+    <div class="container flex flex-col md:flex-row justify-between items-center">
+      <p class="text-lg">&copy; 2025 Slope Unblocked. 保留所有权利。</p>
+      <div class="space-x-6 mt-4 md:mt-0">
+        <a href="/" class="hover:text-green-300 transition-colors">首页</a>
+        <a href="#features" class="hover:text-green-300 transition-colors">特色</a>
+        <a href="#faq" class="hover:text-green-300 transition-colors">FAQ</a>
+        <a href="mailto:contact@slopeunblocked.games" class="hover:text-green-300 transition-colors">联系我们</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript功能 - 修复所有函数定义问题 -->
+  <script>
+    // 全局函数定义 - 修复未定义错误
+    let gameLoadStartTime = 0;
+    
+    // 游戏功能
+    const gameIframe = document.getElementById('game-iframe');
+    const gameLoading = document.getElementById('game-loading');
+    const gameError = document.getElementById('game-error');
+    
+    // 延迟加载游戏iframe
+    function loadGameIframe() {
+      if (!gameIframe) return;
+      const ds = gameIframe.dataset ? gameIframe.dataset.src : null;
+      if (ds && (!gameIframe.src || gameIframe.src === 'about:blank')) {
+        gameLoadStartTime = performance.now();
+        gameIframe.src = ds;
+      }
+    }
+    
+    // 使用Intersection Observer进行延迟加载
+    if ('IntersectionObserver' in window && gameIframe) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            loadGameIframe();
+            io.disconnect();
+          }
+        });
+      }, { rootMargin: '300px' });
+      io.observe(gameIframe);
+    } else {
+      window.addEventListener('load', () => setTimeout(loadGameIframe, 300));
+    }
+    
+    // 游戏加载处理 - 修复函数定义
+    function handleGameLoad() {
+      console.log('游戏加载完成');
+      const loadTime = performance.now() - gameLoadStartTime;
+      console.log(`游戏加载时间: ${loadTime.toFixed(2)}ms`);
+      
+      setTimeout(() => {
+        gameLoading.classList.add('hidden');
+        gameIframe.classList.remove('opacity-0');
+        gameIframe.classList.add('opacity-100');
+        
+        // 触发自定义事件
+        window.dispatchEvent(new CustomEvent('game-loaded', { detail: { loadTime } }));
+      }, 1000);
+    }
+    
+    // 游戏错误处理
+    function handleGameError() {
+      console.error('游戏加载失败');
+      gameLoading.classList.add('hidden');
+      gameError.classList.remove('hidden');
+    }
+    
+    // 重试游戏
+    function retryGame() {
+      gameError.classList.add('hidden');
+      gameLoading.classList.remove('hidden');
+      gameLoadStartTime = performance.now();
+      gameIframe.src = gameIframe.src;
+    }
+    
+    // 全屏功能
+    function toggleFullscreen() {
+      const gameContainer = gameIframe.parentElement;
+      if (!document.fullscreenElement) {
+        gameContainer.requestFullscreen().catch(err => {
+          console.log(`全屏启用失败: ${err.message}`);
+        });
+      } else {
+        document.exitFullscreen();
+      }
+    }
+    
+    // 社交分享
+    function shareGame(platform) {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent('看看这个超棒的Slope Unblocked游戏！免费在线玩！');
+      
+      switch(platform) {
+        case 'twitter':
+          window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank');
+          break;
+        case 'facebook':
+          window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+          break;
+        case 'copy':
+          navigator.clipboard.writeText(window.location.href).then(() => {
+            // 显示临时通知
+            const notification = document.createElement('div');
+            notification.className = 'fixed top-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg z-50';
+            notification.textContent = '链接已复制到剪贴板！';
+            document.body.appendChild(notification);
+            setTimeout(() => {
+              document.body.removeChild(notification);
+            }, 3000);
+          });
+          break;
+      }
+    }
+    
+    // 移动端控制
+    const leftBtn = document.getElementById('left-btn');
+    const rightBtn = document.getElementById('right-btn');
+    
+    function simulateKeyPress(key) {
+      const event = new KeyboardEvent('keydown', {
+        key: key,
+        code: key === 'ArrowLeft' ? 'ArrowLeft' : 'ArrowRight',
+        keyCode: key === 'ArrowLeft' ? 37 : 39,
+        which: key === 'ArrowLeft' ? 37 : 39,
+        bubbles: true,
+        cancelable: true
+      });
+      
+      // 尝试向iframe发送事件
+      try {
+        if (gameIframe.contentWindow && gameIframe.contentWindow.document) {
+          gameIframe.contentWindow.document.dispatchEvent(event);
+        }
+      } catch (e) {
+        // 回退：派发到主窗口
+        document.dispatchEvent(event);
+      }
+    }
+    
+    if (leftBtn) {
+      leftBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        simulateKeyPress('ArrowLeft');
+      });
+      
+      leftBtn.addEventListener('click', (e) => {
+        simulateKeyPress('ArrowLeft');
+      });
+    }
+    
+    if (rightBtn) {
+      rightBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        simulateKeyPress('ArrowRight');
+      });
+      
+      rightBtn.addEventListener('click', (e) => {
+        simulateKeyPress('ArrowRight');
+      });
+    }
+    
+    // 移动端菜单
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.contains('hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+      });
+    }
+    
+    if (mobileMenuClose && mobileMenu) {
+      mobileMenuClose.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      });
+    }
+    
+    // 点击外部关闭菜单
+    if (mobileMenu) {
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // 游戏事件监听 - 确保函数已定义
+    if (gameIframe) {
+      gameIframe.addEventListener('load', handleGameLoad);
+      gameIframe.addEventListener('error', handleGameError);
+      
+      // 超时回退
+      setTimeout(() => {
+        if (gameIframe && (gameIframe.src === 'about:blank' || gameIframe.classList.contains('opacity-0'))) {
+          handleGameError();
+        }
+      }, 10000); // 增加到10秒
+    }
+    
+    // 性能监控
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        if (perfData) {
+          console.log('页面加载时间:', Math.round(perfData.loadEventEnd - perfData.loadEventStart), 'ms');
+        }
+      }, 0);
+    });
+    
+    // 错误处理
+    window.addEventListener('error', (event) => {
+      console.error('全局错误:', event.error);
+    });
+    
+    window.addEventListener('unhandledrejection', (event) => {
+      console.error('未处理的Promise拒绝:', event.reason);
+    });
+    
+    console.log('Slope Unblocked 最终版本已加载');
+  </script>
+</body>
+</html>
