@@ -321,8 +321,8 @@
     /* 加载动画 - 赛博朋克风格 */
     .cyber-loading {
       position: relative;
-      width: 60px;
-      height: 60px;
+      width: 40px;
+      height: 40px;
     }
 
     .cyber-loading::before {
@@ -340,10 +340,10 @@
     .cyber-loading::after {
       content: '';
       position: absolute;
-      top: 6px;
-      left: 6px;
-      width: calc(100% - 12px);
-      height: calc(100% - 12px);
+      top: 4px;
+      left: 4px;
+      width: calc(100% - 8px);
+      height: calc(100% - 8px);
       border: 2px solid transparent;
       border-bottom: 2px solid var(--neon-pink);
       border-left: 2px solid var(--neon-purple);
@@ -1593,7 +1593,7 @@
         gameLoading.classList.add('hidden');
         gameIframe.classList.remove('opacity-0');
         gameIframe.classList.add('opacity-100');
-      }, 1000);
+      }, 300);
     }
 
     function handleGameError() {
